@@ -1,4 +1,5 @@
 #!/bin/sh
+command -v bc >/dev/null 2>&1 || { echo >&2 "I require bc but it's not installed. Aborting."; exit 1; }
 if [ "$#" -eq 2 ]
 then
     echo "obase=$1;$2" | bc
