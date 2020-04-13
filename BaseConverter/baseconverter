@@ -1,0 +1,10 @@
+#!/bin/sh
+if [ "$#" -eq 2 ]
+then
+    echo "obase=$1;$2" | bc
+elif [ "$#" -eq 3 ] 
+then
+    echo "obase=$2;ibase=$1;$3" | bc
+else
+    echo "Usage: (input-base), output-base, input-value"
+fi
